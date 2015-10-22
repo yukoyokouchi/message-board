@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
     @messages = Message.all
     @message = Message.new
   end
+<<<<<<< HEAD
   def edit
   end
   
@@ -22,12 +23,19 @@ class MessagesController < ApplicationController
     @message.destroy
     redirect_to root_path, notice: 'メッセージを削除しました'
   end
+=======
+>>>>>>> 167f4bea5ede2a823a8b48e9296ee5572e4ef3d6
   
   ## ここから追記
   def create
+    p '*************************'
     @message = Message.new(message_params)
     if @message.save
+<<<<<<< HEAD
     redirect_to root_path , notice: 'メッセージを保存しました'
+=======
+       redirect_to root_path , notice: 'メッセージを保存しました'
+>>>>>>> 167f4bea5ede2a823a8b48e9296ee5572e4ef3d6
     else
       # メッセージが保存できなかった時
       @messages = Message.all
