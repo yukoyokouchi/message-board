@@ -5,7 +5,6 @@ class MessagesController < ApplicationController
     @messages = Message.all
     @message = Message.new
   end
-<<<<<<< HEAD
   def edit
   end
   
